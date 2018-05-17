@@ -1,0 +1,89 @@
+// If you edit this file you need to compile the theme. See README.md for details.
+
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-header-font-size: 24px;
+//$v-font-weight: 300;
+//$v-font-family: "Source Sans Pro", sans-serif;
+//$v-font-header-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+@import "../valo/valo.scss";
+
+@mixin mytheme {
+  @include valo;
+
+  .yahtzee-title {
+    font-family: "CMU Serif", serif;
+    font-size: 3em;
+    text-align: center;
+    color: #927C1D;
+  }
+
+  .app-background {
+    background-color: #0C5337;
+    padding: 0px;
+  }
+
+  .title-border {
+    background-color: #FFF9F1;
+    box-shadow: 1px 1px 10px #000000;
+  }
+
+  .regular-label {
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: center;
+    color: #927C1D;
+  }
+
+  .dice-img {
+    margin-top: 4em;
+    margin-bottom: 4em;
+  }
+
+  .start-button {
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+    font-size: 0.5em;
+    alignment: center;
+  }
+
+  .v-button {
+    color: #927C1D;
+  }
+
+  .v-button:hover {
+    font-weight: bold;
+  }
+
+    .v-button:focus:after {
+    -webkit-box-shadow: 0 0 0 2px rgba(255, 249, 241, 0.5);
+    box-shadow: 0 0 0 2px rgba(255, 249, 241, 0.5);
+  }
+
+}
